@@ -26,6 +26,7 @@ interface Person3 {
 
 function askSomeone(someone: Developer | Person3) {
     // Developer와 Person3의 공통 속성에만 접근 가능
+    // 교집합
     someone.name;
     someone.skill;
 }
@@ -42,4 +43,5 @@ function askSomeone2(someone: Developer & Person3) {
 }
 
 // 인터섹션을 사용하면 Developer와 Person3의 타입까지 합한 객체를 넘겨야 한다.
+// 합집합
 askSomeone2({ name: '디벨로퍼', skill: '웹 개발'});
